@@ -1,10 +1,11 @@
 """Tuesday, 1 Dec"""
-from puzzles import puzzles
+from puzzles import get_puzzle
 
-puzzle = puzzles[1]
+puzzle = get_puzzle(1)
+puzzle = [int(p.strip()) for p in puzzle]
 
 
-def test_solution():
+def test():
     example = [1721, 979, 366, 299, 675, 1456]
 
     assert one(example) == 514579
@@ -29,6 +30,6 @@ def two(puzzle: list):
 
 
 if __name__ == "__main__":
-    test_solution()
+    test()
     print(one(puzzle))
     print(two(puzzle))
