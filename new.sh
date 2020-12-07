@@ -4,28 +4,28 @@ day=$(date +'%e')
 file="$(date +'%d').py"
 
 
-template="'''${date}'''
+template="\"\"\"${date}\"\"\"
 from puzzles import get_puzzle
 
-puzzle = get_puzzle(${day})
+puzzle = get_puzzle(${day##* })
 
 
 def test():
-    '''Test'''
+    \"\"\"Test\"\"\"
     assert False
 
 
 def one(puzzle: list):
-    '''Part One'''
+    \"\"\"Part One\"\"\"
     return None
 
 
 def two(puzzle: list):
-    '''Part Two'''
+    \"\"\"Part Two\"\"\"
     return None
 
 
-if __name__ == '__main__':
+if __name__ == \"__main__\":
     test()
     print(one(puzzle))
     print(two(puzzle))"
