@@ -1,7 +1,10 @@
 #!/bin/bash
-date=$(date +'%A, %_d %b')
-day=$(date +'%d')
-echo "'''${date}'''
+date=$(date +'%a, %e %b')
+day=$(date +'%e')
+file="$(date +'%d').py"
+
+
+template="'''${date}'''
 from puzzles import get_puzzle
 
 puzzle = get_puzzle(${day})
@@ -25,5 +28,6 @@ def two(puzzle: list):
 if __name__ == '__main__':
     test()
     print(one(puzzle))
-    print(two(puzzle))
-" | tee "${day}".py
+    print(two(puzzle))"
+
+echo "${template}"| tee "${file}"
