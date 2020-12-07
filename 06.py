@@ -1,4 +1,4 @@
-"""Sun, 6 Dec"""
+"""Sun,  6 Dec"""
 from puzzles import get_puzzle
 
 puzzle = get_puzzle(6)
