@@ -7,19 +7,19 @@ file="$(date +'%d').py"
 template="\"\"\"${date}\"\"\"
 from puzzles import get_puzzle
 
-puzzle = get_puzzle(${day##* })
-example = [
+PUZZLE = get_puzzle(${day##* })
+EXAMPLE = [
 ]
 
 
 def test_one():
     \"\"\"Test Part One\"\"\"
-    assert one(example) == False
+    assert one(EXAMPLE) == False
 
 
 def test_two():
     \"\"\"Test Part Two\"\"\"
-    assert two(example) == False
+    assert two(EXAMPLE) == False
 
 
 def one(puzzle: list):
@@ -34,9 +34,9 @@ def two(puzzle: list):
 
 if __name__ == \"__main__\":
     test_one()
-    print(\"1:\", one(puzzle))
+    print(\"1:\", one(PUZZLE))
     test_two()
-    print(\"2:\", two(puzzle))"
+    print(\"2:\", two(PUZZLE))"
 
 if ! [[ -e "${file}" ]]; then
     echo "${template}" > "${file}"
