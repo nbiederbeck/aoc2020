@@ -8,27 +8,35 @@ template="\"\"\"${date}\"\"\"
 from puzzles import get_puzzle
 
 puzzle = get_puzzle(${day##* })
+example = [
+]
 
 
-def test():
-    \"\"\"Test\"\"\"
-    assert False
+def test_one():
+    \"\"\"Test Part One\"\"\"
+    assert one(example) == False
+
+
+def test_two():
+    \"\"\"Test Part Two\"\"\"
+    assert two(example) == False
 
 
 def one(puzzle: list):
     \"\"\"Part One\"\"\"
-    return None
+    return NotImplemented
 
 
 def two(puzzle: list):
     \"\"\"Part Two\"\"\"
-    return None
+    return NotImplemented
 
 
 if __name__ == \"__main__\":
-    test()
-    print(one(puzzle))
-    print(two(puzzle))"
+    test_one()
+    print(\"1:\", one(puzzle))
+    test_two()
+    print(\"2:\", two(puzzle))"
 
 if ! [[ -e "${file}" ]]; then
     echo "${template}" > "${file}"
