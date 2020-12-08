@@ -1,7 +1,7 @@
 """Tue,  8 Dec"""
 from puzzles import get_puzzle
 
-puzzle = get_puzzle(8)
+PUZZLE = get_puzzle(8)
 
 
 def test():
@@ -58,7 +58,7 @@ def boot(puzzle):
 
 def one(puzzle: list):
     """Part One"""
-    acc, term = boot(puzzle)
+    acc, _ = boot(puzzle)
     return acc
 
 
@@ -85,5 +85,5 @@ def two(puzzle: list):
 
 if __name__ == "__main__":
     test()
-    print("1:", one(puzzle))
-    print("2:", two(puzzle))
+    print("1:", one(PUZZLE))
+    print("2:", two(PUZZLE))
