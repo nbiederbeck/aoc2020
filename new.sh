@@ -30,4 +30,8 @@ if __name__ == \"__main__\":
     print(one(puzzle))
     print(two(puzzle))"
 
-echo "${template}"| tee "${file}"
+if ! [[ -e "${file}" ]]; then
+    echo "${template}" > "${file}"
+else
+    echo "${file} exists."
+fi
